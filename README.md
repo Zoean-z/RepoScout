@@ -28,7 +28,7 @@ RepoScout 是一个 Chrome 扩展，用于在 GitHub 仓库主页快速生成结
 ## 安装方式（开发者模式）
 
 1. 获取项目代码（任选一种）
-   - 下载仓库 ZIP 并解压
+   - 下载仓库
    - `git clone https://github.com/Zoean-z/RepoScout.git`
 2. 打开浏览器扩展页（Chrome 或 Edge）
    - Chrome: `chrome://extensions/`
