@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repo Analyzer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1 id="popupTitle">GitHub Repo Analyzer</h1>
+      <section class="panel ai-panel">
+        <h2 id="aiPanelTitle">AI Enhancement</h2>
+        <label class="toggle-row">
+          <input id="aiEnabledToggle" type="checkbox" />
+          <span id="aiEnableLabel">Enable</span>
+        </label>
+        <p id="aiStatusText">Status: Off</p>
+        <button id="aiSettingsBtn" type="button" class="secondary-btn">设置</button>
+      </section>
+      <p id="status" class="status">Analyzing...</p>
+      <section class="analysis-toolbar">
+        <p id="lastAnalyzedAt" class="analysis-time hidden"></p>
+        <button id="reanalyzeBtn" type="button" class="secondary-btn inline-btn">Reanalyze</button>
+      </section>
+
+      <section id="result" class="hidden">
+        <section class="panel">
+          <h2 class="panel-title"><span id="repoTypeTitle">Repo Type</span> <span id="repoTypeSourceBadge" class="source-badge hidden"></span></h2>
+          <span id="repoType" class="type-tag"></span>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-title"><span id="whatThisRepoIsTitle">What This Repo Is</span> <span id="whatThisRepoIsSourceBadge" class="source-badge hidden"></span></h2>
+          <p id="whatThisRepoIs"></p>
+        </section>
+
+        <section id="readmeTldrSection" class="panel hidden">
+          <h2 class="panel-title"><span id="readmeTldrTitle">README TL;DR</span> <span id="readmeTldrSourceBadge" class="source-badge hidden"></span></h2>
+          <ul id="readmeTldrList"></ul>
+        </section>
+
+        <section id="repoInsightSection" class="panel hidden">
+          <h2 class="panel-title"><span id="repoInsightTitle">Repo Insight</span> <span id="repoInsightSourceBadge" class="source-badge hidden"></span></h2>
+          <h3 id="projectStatusTitle">Project Status</h3>
+          <p><span id="projectStatusLabel" class="status-tag"></span></p>
+          <p id="projectStatusDescription"></p>
+
+          <h3 id="popularityTitle">Popularity</h3>
+          <p id="popularityStars"></p>
+          <p id="popularityForks"></p>
+          <p id="popularityLevel"></p>
+
+          <h3 id="techStackTitle">Tech Stack</h3>
+          <div id="techStackTags" class="tag-list"></div>
+
+          <h3 id="bestForTitle">Best For</h3>
+          <ul id="bestForList"></ul>
+        </section>
+
+        <section id="quickStartSection" class="panel hidden">
+          <h2 class="panel-title"><span id="quickStartTitle">Quick Start</span> <span id="quickStartSourceBadge" class="source-badge hidden"></span></h2>
+          <h3 id="quickStartStepsTitle">Steps</h3>
+          <ol id="quickStartSteps"></ol>
+          <h3 id="quickStartRequirementsTitle">Requirements</h3>
+          <ul id="quickStartRequirements"></ul>
+          <h3 id="quickStartNotesTitle">Notes</h3>
+          <ul id="quickStartNotes"></ul>
+        </section>
+
+        <section id="problemSection" class="panel hidden">
+          <h2 class="panel-title"><span id="problemTitle">Solves What Problem</span> <span id="problemSourceBadge" class="source-badge hidden"></span></h2>
+          <p id="problemText"></p>
+        </section>
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="provider-presets.js"></script>
+    <script src="ai-settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="settings">
+      <h1>设置</h1>
+      <p class="hint">建议：先选择 Provider 和模型，再填写 API Key。</p>
+
+      <section class="card">
+        <label class="row checkbox-row toggle-row">
+          <span class="switch-control">
+            <input id="enabledInput" type="checkbox" />
+            <span class="switch-slider" aria-hidden="true"></span>
+          </span>
+          <span>启用 AI 增强</span>
+        </label>
+        <p id="speedWarning" class="speed-warning">提示：启用 AI 分析可能会显著降低分析速度。</p>
+
+        <label class="row">
+          <span>服务提供方</span>
+          <select id="providerInput"></select>
+        </label>
+        <p id="providerNote" class="provider-note"></p>
+
+        <label class="row" id="modelSelectRow">
+          <span>模型</span>
+          <select id="modelInput"></select>
+        </label>
+
+        <label class="row">
+          <span>API Key</span>
+          <input id="apiKeyInput" type="password" placeholder="请输入 API Key" />
+        </label>
+
+        <label class="row">
+          <span id="outputLanguageLabel">输出语言</span>
+          <select id="languageInput">
+            <option id="languageOptionAuto" value="auto">自动</option>
+            <option id="languageOptionZh" value="zh">中文</option>
+            <option id="languageOptionEn" value="en">英文</option>
+          </select>
+        </label>
+
+        <details id="advancedDetails" class="advanced">
+          <summary id="customModelSettingsSummary">自定义模型设置</summary>
+          <p class="sub-hint">仅当 Provider 选择 Custom Compatible API 时可展开并编辑。</p>
+
+          <label class="row">
+            <span>Base URL</span>
+            <input id="baseUrlInput" type="text" placeholder="https://api.openai.com/v1" />
+          </label>
+
+          <label class="row checkbox-row" id="customModelToggleRow">
+            <input id="useCustomModelInput" type="checkbox" />
+            <span>使用自定义模型名</span>
+          </label>
+
+          <label class="row hidden" id="customModelRow">
+            <span>自定义模型名</span>
+            <input id="customModelInput" type="text" placeholder="your-compatible-model" />
+          </label>
+
+          <p id="debugInfo" class="debug"></p>
+        </details>
+
+        <div class="actions">
+          <button id="saveBtn" type="button">保存</button>
+          <button id="testBtn" type="button" class="secondary">测试连接</button>
+        </div>
+
+        <p id="saveReminder" class="save-hint hidden">你有未保存的修改，请点击“保存”应用设置。</p>
+        <p id="statusText" class="status"></p>
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="provider-presets.js"></script>
+    <script src="ai-settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
+
