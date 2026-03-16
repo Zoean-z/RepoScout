@@ -35,7 +35,7 @@ It combines a rule-based analyzer with optional AI enhancement to help you quick
    - Edge: `edge://extensions/`
 3. Enable **Developer mode**
 4. Click **Load unpacked**
-5. Select the project directory that contains `manifest.json`
+5. Select the project directory  `app`
 6. Open any GitHub repo homepage and click the extension icon
 
 ## Usage
