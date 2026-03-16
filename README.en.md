@@ -28,7 +28,7 @@ It combines a rule-based analyzer with optional AI enhancement to help you quick
 ## Installation (Developer Mode)
 
 1. Get the source code (choose one)
-   - Download the repository ZIP and extract it
+   - Download the repository
    - `git clone https://github.com/Zoean-z/RepoScout.git`
 2. Open the extension page in Chrome or Edge
    - Chrome: `chrome://extensions/`
